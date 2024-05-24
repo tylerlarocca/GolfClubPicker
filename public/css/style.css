@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  nav a {
+    margin: 0 1em;
+    color: white;
+    text-decoration: none;
+  }
+  #clubs .club-card {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em;
+  }
+  .table-responsive {
+    margin-top: 20px;
+  }
+  h2 {
+    margin-top: 20px;
+  }

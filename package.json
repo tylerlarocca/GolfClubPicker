@@ -1,0 +1,20 @@
+{
+  "name": "golfclubpicker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server public --port=8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "description": ""
+}
