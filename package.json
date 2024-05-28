@@ -9,9 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.2",
     "body-parser": "^1.20.2",
+    "cheerio": "^1.0.0-rc.12",
     "express": "^4.19.2",
-    "mongoose": "^8.4.0"
+    "mongoose": "^8.4.0",
+    "puppeteer": "^22.10.0"
   },
   "devDependencies": {
     "live-server": "^1.2.2"

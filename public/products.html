@@ -9,30 +9,52 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">Golf Club Picker</a>
+        <a class="navbar-brand" href="/"><img class="bag-header" src="/images/GolfBag.png" alt="Golf Bag"> Golf Club Picker</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/products">Products</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/list">Build your Bag</a>
+                    <a class="nav-link" href="list.html">Build your Bag</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container mt-5">
         <h2 class="text-center">Product Categories</h2>
-        <ul>
-            <li><a href="#">Drivers</a></li>
-            <li><a href="#">Irons</a></li>
-            <li><a href="#">Wedges</a></li>
-            <li><a href="#">Putters</a></li>
+        <ul class="text-center">
+            <li><a href="#" id="driversLink">Drivers</a></li>
             <!-- Add more categories as needed -->
         </ul>
+
+        <div id="productsList" class="row"></div>
     </div>
+
+    <script>
+        document.getElementById('driversLink').addEventListener('click', async function () {
+            const response = await fetch('/products/drivers');
+            const drivers = await response.json();
+            const productsList = document.getElementById('productsList');
+            productsList.innerHTML = '';
+            drivers.forEach(driver => {
+                const col = document.createElement('div');
+                col.className = 'col-md-4';
+                col.innerHTML = `
+                    <div class="card mb-4 shadow-sm">
+                        <img src="${driver.img}" class="card-img-top" alt="${driver.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${driver.name}</h5>
+                            <p class="card-text">${driver.price}</p>
+                        </div>
+                    </div>
+                `;
+                productsList.appendChild(col);
+            });
+        });
+    </script>
 </body>
 </html>

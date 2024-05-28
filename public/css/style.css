@@ -1,10 +1,17 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url('https://images.ctfassets.net/56u5qdsjym8c/5nTJNM7NEhKpTwGJtC2fy/352dec156a55f7c7baf72de242fc204a/FrenchLick-Escape-Hero.jpg?fl=progressive&q=80');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+    margin: 0;
+    padding: 0;
   }
   header {
     background-color: #4CAF50;
     color: white;
-    padding: 1em;
+    padding: 10px;
     text-align: center;
   }
   nav a {
@@ -23,3 +30,33 @@ body {
   h2 {
     margin-top: 20px;
   }
+  .navbar-brand img.bag-header {
+    width: 100px; 
+    height: auto; 
+    object-fit: contain; 
+    border-radius: 5px; 
+    padding: 0px; 
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
